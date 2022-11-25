@@ -85,45 +85,6 @@ class ReservationController extends Controller
 
         $total = $request->people * $offre->price;
         
-        // ana people string
-        // ayeh o chno khask diri ? 5asni nrj3a int
-        // o lach madrtihach ? hi jiti o ana nfham wlah makant fahma walo
-        // Mahawltich tqray ga3 l'error, nti chfti l'error safe tsdmti 
-        // wach qriti dik l jomla mn l barh mnin jak had error hawlti tqray dak l'error o tfhmih ?ouii
-        // o kifach mafhmtihch ?ma3rftch 
-        // daba khask tfkri m3a rask kifach daba mafhmtihch ? ana rah majit glt lik tahaja
-        // swltk 3la ach kay3ni dak l'error o fhmtih, 3lach mafhmtihch bohdk ?
-        // fach kant bo7di kant katban liya dbaba f l'erreur safi hi d5alti Krito fhmto
-        // wlah ma3rftch nkdab 3lik ila jawbtak b chi jawab
-        // rah hadchi li dima kaytra lik, kat'encounctray m3a chi haja katbday katzyeri 39elk
-        // Koulchi 3ndk f dmaghk, mais makat7awlich tnfsi chwya mzian o tgoli "alor kifach nqdr ndir hadchi"
-        // katban lik error katbday direct tester f les solutions 
-        // ch7al mn haja katwriha lia wahla fiha o ana 3arfk 3arfa ljawab mais makat3rfich kifach twsli lih
-        // fach qriti l'errro lbarh achno fhmti mno ? mafhmt fih walo
-        // o 3lach machditihch trjmih ? nn matrjmtoch 
-        // 3lach ? je re 1 min ok 
-        // dd($total);
-        // Safe wakha, ila kan mchargi mn hna l 20 min ndiro appel sinn pg koi pg
-        // pg = pas grave hh ok
-        // malk 3la dik dhka 'hh' hhhhhhhh ziko????????tu es la??
-        // oui, daba dyaf aymchiw, kantsnahom ikhrjo ok bach nslm 3lihom o nchd tani pc ah oui
-        // ok o nakhod rahti f dar bohdi tani hhhhhhhhhhhh ahsan hajaaaa
-        // anmchi njib driate o nzha n3iyat lik police rah 3arfa l 'addresse 
-        // kidrti ta 3arfa l'address o dar li sakn fiha ana aslan ma3ndhach l'address 3arfaa
-        // rah makaynach 3ndi l'address hhhhh ach 3arfa, rah mamtitryach had dar huuumm
-        // khlina nzhaw 3la khatrna hhhhhhhhhh chwiya o dir liya vedio bghit nchof dryiat o nzha m3akoum
-        // lawahyata 7choma! kifach hchouma 
-
-        //2. On met a jour les informations du Reservation
-        // total o offre_id bjoj null;
-        // total rah nti katcalculih machi katjibih mn request
-        // Daba 3lach dayra $request->total o nti yalah calculati $total qbl 
-        // ?? zakaria 3afak ach nahiya request
-        // request hwa dakchi kaml li kayji mn l frontend
-        // dakhel fih les donnes d form o ch7al mn haja.
-        // dd($request->total,  $total, $request->offre_id);
-        //offre_id katji null 3lach direct 3arfti offre_id o homa m5rjin total
-        // chofi error achno kaygolik 
         $reservation = Reservation::create(
             [
                 "first_name" => $request->first_name,
